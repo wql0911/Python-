@@ -10,4 +10,22 @@ print(b==a)
 print(id(a))
 print(id(b))
 
-#输出结果 1  1  0  1  2270785366152  227078060045
+#输出结果 True True False True 2270785366152  227078060045
+
+a=8
+b=8.00
+print(b is a)
+print(b==a)
+
+print(id(a))
+print(id(b))
+
+b=8
+print(b is a)
+print(b==a)
+
+#输出结果 False True 140711454732768 1643410230288 True True
+#两个int的数字无论多大b is a值为True
+
+#is  id()
+#==  value
