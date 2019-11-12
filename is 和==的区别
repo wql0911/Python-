@@ -1,0 +1,13 @@
+a=[1,2,3]
+b=a
+print(b is a)
+print(b==a)
+
+b=a[:]  #b=[1,2,3]
+print(b is a)
+print(b==a)
+
+print(id(a))
+print(id(b))
+
+#输出结果 1  1  0  1  2270785366152  227078060045
