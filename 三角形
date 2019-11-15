@@ -1,0 +1,11 @@
+#已知三边长
+a=float(input('a= '))
+b=float(input('b= '))
+c=float(input('c= '))
+if a+b>c and a+c>b and b+c>a:
+    C=a+b+c
+    p=(a+b+c)/2
+    S=(p*(p-a)*(p-b)*(p-c))**0.5
+    print(S,C)         #输出为float
+else:
+    print('不能构成三角形')
