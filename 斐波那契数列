@@ -1,0 +1,5 @@
+x,y=0,1
+n=input()
+for i in range(1,n+1):      #区间左闭右开
+    print(y)
+    x,y=y,x+y
