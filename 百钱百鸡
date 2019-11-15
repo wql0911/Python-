@@ -1,0 +1,20 @@
+#暴力搜索
+for x in range(0,20):   #公鸡5元一只，100元最多20只
+    for y in range(0,33):     #母鸡3元一只
+        z=100-x-y
+        if 5*x+3*y+z/3==100:
+            print('公鸡：%d,母鸡：%d,小鸡：%d'%(x,y,z))
+            
+            
+            
+   
+   
+   
+#随机数法
+import random
+while True:
+	x = random.randrange(0,20)
+	y = random.randrange(0,33)
+	z = random.randrange(0,100)
+	if 5*x+3*y+z/3 == 100 and x+y+z == 100: print('公鸡：%d,母鸡：%d,小鸡：%d'%(x,y,z))
+  #输出值会重复
