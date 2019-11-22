@@ -1,0 +1,7 @@
+def move(n, i, j, k):
+    if(n == 1):
+        print(i,"->",k)
+        return
+    move(n-1, i, k, j)      #把n-1个盘子从i移到j
+    move(1, i, j, k)        #把最下面的盘子从i移到k
+    move(n-1, j, i, k)      #把j上n-1个盘子一个个移到k上
