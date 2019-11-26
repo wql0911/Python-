@@ -1,0 +1,58 @@
+#有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？
+
+sum=0
+for i in range(1,5):
+    for j in range(1,5):
+        for k in range(1,5):
+            if i!=j and i!=k and j!=k:
+                print(i,j,k)
+                sum=sum+1
+print(sum)
+
+
+
+
+#输入某年某月某日，判断这一天是这一年的第几天？
+
+year=int(input())
+mouth=int(input())
+day=int(input())
+mouth_day=[0,31,59,90,120,151,181,212,243,273,304,334]
+if 0<mouth<=12:
+    sum=mouth_day[mouth-1]
+else:
+    print(error)
+sum=sum+day
+if year%400==0 or year%4==0 and year%100!=0:   #判断是否为闰年
+    if mouth>2:
+        sum=sum+1
+print(sum)
+
+
+
+
+#输入三个整数x,y,z，请把这三个数由大到小输出
+
+x=int(input( ))
+y=int(input( ))
+z=int(input( ))
+
+if x>y:
+    if y>z:
+        print(x,y,z)
+    elif(x>z):
+        print(x,z,y)
+    else:
+        print(z,x,y)
+else:
+    if x>z:
+        print(y,x,z)
+    elif(y>z):
+        print(y,z,x)
+    else:
+        print(z,y,x)
+        
+        
+        
+        
+ 
