@@ -1,0 +1,54 @@
+class Restaurant():
+    def __init__(self,name,cuisine_type):
+        self.name=name.title()
+        self.cuisine_type=cuisine_type
+        self.number_served=0
+
+    def descirbe_restaurant(self):
+        msg=self.name+"提供"+self.cuisine_type
+        print(msg)
+
+    def open_restuarant(self):
+        msg=self.name+"正在营业。"
+        print(msg)
+
+    def set_number_served(self):
+        self.number_served=number_served
+
+    def increment_number_served(self,additional_served):
+        #能将就餐人数递增
+        self.number_served+=additional_served
+
+class IceCreamStand(Restaurant):
+    def __init__(self, name, cuisine_type='ice_cream'):
+        super().__init__(name, cuisine_type)
+        self.flavors=[]
+
+    def show_flavors(self):
+        print("冰淇淋的口味有：")
+        for flavor in self.flavors:
+            print(" "+flavor.title())
+
+
+restaurant=Restaurant('the pizza','piiza')
+print(restaurant.name)
+print(restaurant.cuisine_type)
+
+restaurant.descirbe_restaurant()
+restaurant.open_restuarant()
+
+print('number served: '+str(restaurant.number_served))
+restaurant.number_served=233
+print('number served: '+str(restaurant.number_served))
+
+restaurant.increment_number_served(2333)
+print('number served: '+str(restaurant.number_served))
+
+the_icecream=IceCreamStand('ice')
+print(restaurant.name)
+print(restaurant.cuisine_type)
+
+the_icecream.flavors=['草莓','蓝莓','巧克力']
+the_icecream.descirbe_restaurant()
+the_icecream.show_flavors()
+#方法的名称不能和列表一样，会获取列表
