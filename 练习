@@ -92,3 +92,61 @@ if others:
 
 
 
+#一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？
+
+tour = []
+cry = [] #储存小球的总高度
+
+high = 100 #小球的高度
+cou = 10
+
+for i in range(1, cou + 1):
+    if i ==1:
+        tour.append(high)
+    else:
+        tour.append(2 * high)
+    high /= 2
+    cry.append(high)
+print("小球共经过{}米".format(sum(tour)))
+print("小球在第10次反弹的时候高度为：{}".format(cry[-1]))
+
+#将上述代码改为自定义第几次落地
+tour = []
+cry = [] 
+
+high = 100 
+cou = int(input('小球第 次落地'))  #如果不强制转换会报错，cou默认为字符型
+
+for i in range(1, cou + 1):
+    if i ==1:
+        tour.append(high)
+    else:
+        tour.append(2 * high)
+    high /= 2
+    cry.append(high)
+print("小球共经过{}米".format(sum(tour)))
+print("小球在第{}次反弹的时候高度为：{}".format(cou,cry[-1]))
+
+
+
+
+#求s=a+aa+aaa+aaaa+aa…a的值，其中a是一个数字。例如2+22+222+2222+22222(此时共有5个数相加)，几个数相加由键盘控制
+
+#例如输入数字为2,222用2+20+200来算
+a=int(input())  #相加的数字
+b=int(input())  #几项相加
+n=0
+sum=0
+for i in range(0,b):
+    n+=pow(10,i)  #pow(a,b)=a**b   pow(a,b,c)=(a*b)%c
+    sum+=n*a
+print(sum)
+
+#将数值看为字符串，进行字符串的拼接求值，记得类型转换
+a=int(input()) #相加的数字
+b=int(input()) #几项相加
+sum=0
+for i in range(1,b+1):
+    x=int(str(a)*i)
+    sum+=x
+print(sum)
